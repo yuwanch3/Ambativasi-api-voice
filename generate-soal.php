@@ -1,7 +1,8 @@
 <?php
 require_once "db.php";
+require_once "env.php";
 
-const GEMINI_API_KEY = "AQ.Ab8RN6I_CnjapZultXopx6426xra2BgvrCPmhTgjIJ5d3Ics_Q";
+const GEMINI_API_KEY = getenv('GEMINI_API_KEY');
 
 $input = json_decode(file_get_contents("php://input"), true);
 
